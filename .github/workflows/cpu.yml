@@ -12,4 +12,8 @@ jobs:
           python-version: '3.12'
       - run: python -m compileall -q .
       - run: python cpu_study.py --output build/ci.json
+      - run: python verify_composition.py
+      - run: python verify_certificates.py
       - run: python verify_results.py
+      - run: python summarize_results.py
+      - run: git diff --exit-code -- results/summary.csv

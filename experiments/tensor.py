@@ -59,3 +59,19 @@ def reduce_group(scheme,indices,axis,subset):
     for i in selected[1:]:result[i][w]^=scheme[pivot][w]
     result[pivot]=[0,0,0]
     return prune(result)
+
+def kronecker_square(outer,inner,outer_side,inner_side):
+    side=outer_side*inner_side;result=[]
+    for a in outer:
+        for b in inner:
+            factors=[]
+            for x,y in zip(a,b):
+                mask=0
+                for i in bits(x):
+                    for j in bits(y):
+                        row=(i//outer_side)*inner_side+j//inner_side
+                        column=(i%outer_side)*inner_side+j%inner_side
+                        mask|=1<<(row*side+column)
+                factors.append(mask)
+            result.append(factors)
+    return result

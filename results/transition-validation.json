@@ -1,0 +1,56 @@
+{
+  "cases": [
+    {
+      "kind": "flip",
+      "cpu_matched_transitions": {
+        "flip": 512
+      },
+      "gpu_branch_counts": [
+        512,
+        0,
+        0,
+        0,
+        0,
+        512
+      ]
+    },
+    {
+      "kind": "plus",
+      "cpu_matched_transitions": {
+        "plus": 493,
+        "unchanged": 19
+      },
+      "gpu_branch_counts": [
+        0,
+        512,
+        0,
+        0,
+        0,
+        512
+      ]
+    },
+    {
+      "kind": "generalized",
+      "cpu_matched_transitions": {
+        "flip": 507,
+        "generalized_reduction": 5
+      },
+      "gpu_branch_counts": [
+        483,
+        0,
+        29,
+        0,
+        0,
+        512
+      ]
+    }
+  ],
+  "total_matched_transitions": 1536,
+  "source_sha256": {
+    "validate_transitions.py": "22c5a9dda7196bb3106c37c98f38927db191d9fc0a1cefc2c2f42b63073d3a7f",
+    "gpu_study.py": "9a30aaa1060a07587118e8a35450531a196885189b3c8e9033acb897d83b1602",
+    "experiments/tensor.py": "e3f63115bdae81ed774d5a103d86061500ab643c9b7dd2a2233f2e76bfc13acb",
+    "cuda/search.cu": "8d6b938cff75e44ed2afde67ec8f3989afcacec1c0befd9eeaa6caa7929c0ef3"
+  },
+  "scope": "Actual production GPU kernel snapshots matched against independent CPU flip, plus and shared-factor reduction. Extra zero-sum triads deliberately exercise group reduction; forced-plus fixture exercises insertion. Exact tensor checked after every transition, including slot shuffles."
+}

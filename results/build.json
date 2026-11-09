@@ -1,0 +1,20 @@
+{
+  "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2026 NVIDIA Corporation\nBuilt on Tue_Jun_09_02:43:40_PM_PDT_2026\nCuda compilation tools, release 13.3, V13.3.73\nBuild cuda_13.3.r13.3/compiler.38244171_0",
+  "flags": [
+    "-O3",
+    "-std=c++17",
+    "-arch=sm_120",
+    "-cubin"
+  ],
+  "source_sha256": {
+    "collect_build.py": "eddc438c18011d9bcc31a62ece553f60af2d8c6f41c86ff45a04140edad2aa09",
+    "cuda/search.cu": "8d6b938cff75e44ed2afde67ec8f3989afcacec1c0befd9eeaa6caa7929c0ef3"
+  },
+  "result_sha256": {
+    "gpu-study.json": "0062cc59e4f4259ca84ccc232c71ebdd3f9a637f29a8a56a94c16ece5273a2b0",
+    "gpu-replication.json": "26b1ff7b707960afdf68706d6962f8c270d560c4989da8a2bf21578d64239071",
+    "transition-validation.json": "4aaccbdce4d4a12028001df9a35b6243a12040e50746f5c340d7953c52152674"
+  },
+  "cubin_sha256": "dd094cbf41ce5beeeae09ade31be30d8133323a3b0234f5f1ae26e0b8304ead0",
+  "scope": "Post-run provenance for the exact CUDA binary used by both campaigns. Binary hashes identify measured builds; different rebuilds need not be byte-identical."
+}

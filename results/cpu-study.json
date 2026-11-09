@@ -29,16 +29,27 @@
         4
       ],
       "exact_tensor": true
+    },
+    {
+      "file": "paper-7x7x7-rank245.json",
+      "rank": 245,
+      "shape": [
+        7,
+        7,
+        7
+      ],
+      "exact_tensor": true
     }
   ],
-  "matrix_product_checks": 556,
+  "matrix_product_checks": 656,
   "exact_transition_checks": 900,
   "source_sha256": {
     "cpu_study.py": "d6c679fe5cad84b24fa937919e061fcf564e69bec1c2fc29f1637436cd801da6",
-    "experiments/tensor.py": "d8524af24ca7193f1098f7d5fabadd556ddfc052be244e6680afc4afd33f224e",
+    "experiments/tensor.py": "e3f63115bdae81ed774d5a103d86061500ab643c9b7dd2a2233f2e76bfc13acb",
     "fixtures/alphatensor-2x2x2.json": "ab823eefbc434919d54c980c4d5dadf90c834b710460d299322c377074ed3e30",
     "fixtures/alphatensor-3x3x3.json": "708da262479c2e86df449082749a289f4aff7438a787b35ee28977a26c6b0e4e",
-    "fixtures/alphatensor-4x4x4.json": "3c6b5df909fa6c8aa61b432e2f09bea9bf725b962c12b21c7e08a37f432154fb"
+    "fixtures/alphatensor-4x4x4.json": "3c6b5df909fa6c8aa61b432e2f09bea9bf725b962c12b21c7e08a37f432154fb",
+    "fixtures/paper-7x7x7-rank245.json": "66787d0ef6d647a3da5ae8439ea2e56c7d858a4fb74700f4662c444d0d67778d"
   },
   "scope": "Exact tensor identity and independent GF(2) matrix evaluation. Published schemes are attributed references, not discoveries by this project."
 }
