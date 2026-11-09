@@ -20,5 +20,5 @@ for key in ('2,2,2','4,4,4','3,3,3'):
     result=dict(shape=shape,rank=len(scheme),scheme=scheme,origin='google-deepmind/alphatensor',revision=REVISION,
                 data_file='algorithms/factorizations_f2.npz',data_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
                 convention='Third factor transposed from trilinear trace orientation to row-major output.',license='Apache-2.0')
-    pathlib.Path('fixtures/alphatensor-'+key.replace(',','x')+'.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+    pathlib.Path('fixtures/alphatensor-'+key.replace(',','x')+'.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8',newline='\n')
 pathlib.Path('fixtures/ALPHATENSOR-LICENSE').write_bytes((args.upstream/'LICENSE').read_bytes())
