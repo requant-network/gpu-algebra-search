@@ -1,0 +1,44 @@
+{
+  "certificates": [
+    {
+      "file": "alphatensor-2x2x2.json",
+      "rank": 7,
+      "shape": [
+        2,
+        2,
+        2
+      ],
+      "exact_tensor": true
+    },
+    {
+      "file": "alphatensor-3x3x3.json",
+      "rank": 23,
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "exact_tensor": true
+    },
+    {
+      "file": "alphatensor-4x4x4.json",
+      "rank": 47,
+      "shape": [
+        4,
+        4,
+        4
+      ],
+      "exact_tensor": true
+    }
+  ],
+  "matrix_product_checks": 556,
+  "exact_transition_checks": 900,
+  "source_sha256": {
+    "cpu_study.py": "d6c679fe5cad84b24fa937919e061fcf564e69bec1c2fc29f1637436cd801da6",
+    "experiments/tensor.py": "d8524af24ca7193f1098f7d5fabadd556ddfc052be244e6680afc4afd33f224e",
+    "fixtures/alphatensor-2x2x2.json": "f8989527572e2182975302bebf7a77557a77e2e7bc1d34ee477160fb4806826d",
+    "fixtures/alphatensor-3x3x3.json": "f01e1b3e5b0ea915f21498a6138257860fa6c573c1dac2717a998ac68fd0aa4e",
+    "fixtures/alphatensor-4x4x4.json": "cc083ab290a17259b8469f6a90eba5d29407f3c7c4d6422a8357fd360595e211"
+  },
+  "scope": "Exact tensor identity and independent GF(2) matrix evaluation. Published schemes are attributed references, not discoveries by this project."
+}

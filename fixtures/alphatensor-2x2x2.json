@@ -1,0 +1,51 @@
+{
+  "shape": [
+    2,
+    2,
+    2
+  ],
+  "rank": 7,
+  "scheme": [
+    [
+      12,
+      12,
+      10
+    ],
+    [
+      4,
+      15,
+      4
+    ],
+    [
+      2,
+      4,
+      15
+    ],
+    [
+      14,
+      14,
+      14
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      15,
+      2,
+      2
+    ],
+    [
+      10,
+      10,
+      12
+    ]
+  ],
+  "origin": "google-deepmind/alphatensor",
+  "revision": "1949163da3bef7e3eb268a3ac015fd1c2dbfc767",
+  "data_file": "algorithms/factorizations_f2.npz",
+  "data_sha256": "70f09f349d8d2874ef0e0e089459c7320f5aa3eef277df5ffa67f573709db2da",
+  "convention": "Third factor transposed from trilinear trace orientation to row-major output.",
+  "license": "Apache-2.0"
+}
