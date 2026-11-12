@@ -1,0 +1,5 @@
+control,paired_trials,control_only,candidate_only,both_success,neither_success,two_sided_exact_p,holm_adjusted_p
+fixed1,64,12,1,1,50,0.00341796875,0.0068359375
+group1,64,17,2,0,45,0.000728607177734375,0.002185821533203125
+adaptive2,64,15,1,1,47,0.000518798828125,0.0020751953125
+pool1,64,8,2,0,54,0.109375,0.109375

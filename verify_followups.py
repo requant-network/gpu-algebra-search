@@ -6,9 +6,9 @@ import math
 from pathlib import Path
 from statistics import median
 assert __debug__
-PATTERNS = ('compiled-*.json','diversity-*.json','wide-*.json')
+PATTERNS = ('compiled-*.json','diversity-*.json','wide-*.json','policy-statistics.json')
 paths=sorted(set(p for pattern in PATTERNS for p in Path('results').glob(pattern)))
-assert len(paths)==7,(len(paths),[p.name for p in paths])
+assert len(paths)==8,(len(paths),[p.name for p in paths])
 records={p.name:json.loads(p.read_text()) for p in paths}
 def binding(name,expected,result=False):
  p=(Path('results')/name) if result else Path(name)
@@ -25,6 +25,10 @@ def provenance(r):
 for r in records.values():provenance(r)
 from experiments.tensor import verify
 fixture=json.loads(Path('fixtures/discovered-rank47.json').read_text());assert len(fixture['scheme'])==47 and verify(fixture['scheme'],fixture['shape'])
+statistics=records['policy-statistics.json'];assert len(statistics['comparisons'])==4
+for row in statistics['comparisons']:
+ assert row['paired_trials']==64==sum(row[key] for key in ('control_only','candidate_only','both_success','neither_success'))
+ assert 0<=row['two_sided_exact_p']<=row['holm_adjusted_p']<=1
 for name,r in records.items():
  if name.startswith('compiled-') and 'cases' in r:
   assert r['exhaustive_a_basis_b_pairs']==1048576 and len(r['cases'])==3

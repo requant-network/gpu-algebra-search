@@ -17,5 +17,6 @@ jobs:
       - run: python verify_certificates.py
       - run: python verify_results.py
       - run: python summarize_results.py
+      - run: python policy_statistics.py
       - run: python verify_followups.py
-      - run: git diff --exit-code -- results/followup-summary.csv results/summary.csv
+      - run: git diff --exit-code -- results/followup-summary.csv results/summary.csv results/policy-statistics.json results/policy-summary.csv

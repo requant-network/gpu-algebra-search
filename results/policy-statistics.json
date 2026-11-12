@@ -1,0 +1,53 @@
+{
+  "candidate": "diverse8",
+  "comparisons": [
+    {
+      "control": "fixed1",
+      "paired_trials": 64,
+      "control_only": 12,
+      "candidate_only": 1,
+      "both_success": 1,
+      "neither_success": 50,
+      "two_sided_exact_p": 0.00341796875,
+      "holm_adjusted_p": 0.0068359375
+    },
+    {
+      "control": "group1",
+      "paired_trials": 64,
+      "control_only": 17,
+      "candidate_only": 2,
+      "both_success": 0,
+      "neither_success": 45,
+      "two_sided_exact_p": 0.000728607177734375,
+      "holm_adjusted_p": 0.002185821533203125
+    },
+    {
+      "control": "adaptive2",
+      "paired_trials": 64,
+      "control_only": 15,
+      "candidate_only": 1,
+      "both_success": 1,
+      "neither_success": 47,
+      "two_sided_exact_p": 0.000518798828125,
+      "holm_adjusted_p": 0.0020751953125
+    },
+    {
+      "control": "pool1",
+      "paired_trials": 64,
+      "control_only": 8,
+      "candidate_only": 2,
+      "both_success": 0,
+      "neither_success": 54,
+      "two_sided_exact_p": 0.109375,
+      "holm_adjusted_p": 0.109375
+    }
+  ],
+  "source_sha256": {
+    "policy_statistics.py": "41b8dfdd01059fb4c99b1d8d1ea30fafcf8a693514207a154a4b171f217ecbc6"
+  },
+  "result_sha256": {
+    "diversity-study.json": "29da13cc06016ac52440f395efa62f1fb84778468e0e7e261ae764adee2ba94e",
+    "diversity-replication.json": "34068eb94d3ebbe471a44defc1b9c02575f9db55a3ef2fa6d3e2991c7cba7e52"
+  },
+  "scope": "Exploratory post-hoc exact two-sided McNemar/binomial test on64 paired seeded trials, with Holm adjustment over the four candidate-versus-control comparisons. Target hit at the declared5-second budget;failed/censored trials retained. No pre-registration,universal policy ranking,asymptotic search or fixed-input latency confidence claim."
+}

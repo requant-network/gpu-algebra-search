@@ -13,6 +13,17 @@ Two independent cohorts each compare five policies on 4x4x4: 32 trials per polic
 
 Each cell counts trials reaching rank 47. Distinct-elite copying did not improve this bounded search; it was worse in both cohorts. Retain the simpler policies rather than treating population diversity as an established improvement. Rank 47 reproduces a known bound; no new matrix-multiplication record was found. The two cohorts show substantial success-count variation, so these counts are not a universal policy ranking or an extrapolated time-to-solution theorem.
 
+An exploratory post-hoc paired analysis uses all 64 distinct trial seeds, preserving within-trial matching. It applies an exact two-sided discordance/binomial test and Holm correction over the four new-candidate/control comparisons; censored failures remain failures at the declared budget.
+
+| Control | Control-only successes | Diverse-only successes | Exact p | Holm-adjusted p |
+| --- | ---: | ---: | ---: | ---: |
+| fixed1 | 12 | 1 | 0.00341797 | 0.00683594 |
+| group1 | 17 | 2 | 0.00072861 | 0.00218582 |
+| adaptive2 | 15 | 1 | 0.00051880 | 0.00207520 |
+| pool1 | 8 | 2 | 0.10937500 | 0.10937500 |
+
+This exploratory table supports the bounded negative decision against preferring `diverse8` to fixed/group/adaptive controls in these trials; the single-elite-pool contrast is not established at the same conventional threshold. It is not a pre-registered confirmation or a universal ranking. [policy_statistics.py](policy_statistics.py), [raw paired analysis](results/policy-statistics.json) and [derived table](results/policy-summary.csv) preserve the exact calculation and input bindings; CI regenerates both outputs.
+
 ## Compiling rank 47: fewer multiplications is slower here
 
 The [discovered rank-47 fixture](fixtures/discovered-rank47.json) is compiled into a straight-line GF(2) 4x4 scalar product. The independent direct comparator computes row/column parities. An exhaustive GPU check of every A bit pattern against each basis B tests 1,048,576 pairs, exercising the complete tensor identity. Each full random batch is also compared with an independent CPU bit-product oracle. Damaged tensor certificates reject.
