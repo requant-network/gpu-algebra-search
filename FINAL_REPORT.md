@@ -110,3 +110,7 @@ python summarize_results.py
 ## Conclusion and further work
 
 The completed campaign reproduces an exact rank-47 result on consumer hardware and shows that target attainment depends on the transition policy, not just raw transition rate. Group reductions at one probe are the strongest observed policy here, with broad uncertainty. Pooling at this interval does not help. Larger independent cohorts, better population scheduling, 64-bit factors, structured larger tensors and compiling discovered schemes into measured GF(2) kernels are distinct next studies. A GF(2) decomposition does not automatically lift to FP8/real arithmetic, a faster GEMM, or a permissionless proof-of-work protocol.
+
+## Follow-up closure, 12 November 2026
+
+The [follow-up report](FOLLOWUP_REPORT.md) resolves the concrete next steps with new evidence and updated conclusions. Its findings supersede the open-work wording in this historical campaign.

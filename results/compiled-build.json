@@ -1,0 +1,15 @@
+{
+  "source_sha256": {
+    "compile_scheme.py": "bffbe156fb139da4de3383310983c18bf1c0f9e1831b5ce03d4db71b9418584b",
+    "experiments/tensor.py": "e3f63115bdae81ed774d5a103d86061500ab643c9b7dd2a2233f2e76bfc13acb",
+    "fixtures/discovered-rank47.json": "48470b2089447b1c60b0235a6def458417f79ef540cdc735d87a65f77f719392"
+  },
+  "generated_source_sha256": "0130efbb65444fd21afb86a6c529b60ec025b660b6f3fe2d4dce38a9df9341c3",
+  "cubin_sha256": "d384f11fbfc8687c9319844a54f4a6bbc275fd1d74ad1a48e6b2e7fb55a8b8dc",
+  "flags": [
+    "-O3",
+    "-std=c++17",
+    "-arch=sm_120",
+    "-cubin"
+  ]
+}

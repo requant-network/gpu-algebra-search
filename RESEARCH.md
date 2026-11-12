@@ -31,3 +31,7 @@ Publish executable CPU/GPU studies, all required comparisons, independent verifi
 This bounded campaign is complete. Larger cohorts, alternative population schedules,
 64-bit factors and compiling schemes into measured GF(2) kernels remain separate
 future studies; they are not silently included in the completed claims.
+
+## Follow-up closure, 12 November 2026
+
+The [follow-up report](FOLLOWUP_REPORT.md) records the disposition of the concrete next steps: new experiments, negative findings and measured resource limits. The earlier completed campaign remains available for historical comparison. Run `python verify_followups.py` for the added evidence checks.
